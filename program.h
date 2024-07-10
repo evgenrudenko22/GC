@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 namespace program {
 	class lexer
@@ -17,4 +18,18 @@ namespace program {
 		std::string token;
 		std::vector<std::string> tokens;
 	};
+
+	class parser
+	{
+	public:
+		parser(std::vector<std::string>& tokens);
+		~parser() = default;
+		void parse()
+	
+	private:
+		std::vector<std::string> tokens;
+		size_t pos = 0;
+		std::unordered_map<std::string, int> variables;
+	}
+
 }

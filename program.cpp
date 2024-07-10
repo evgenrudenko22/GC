@@ -52,4 +52,14 @@ namespace program {
 
 		return tokens;
 	}
+
+	parser::parser(std::vector<std::string> tokens){
+		this->tokens = tokens;
+	}
+
+	void parser::parse(){
+        while(pos < tokens){
+			
+		}
+	}
 }
